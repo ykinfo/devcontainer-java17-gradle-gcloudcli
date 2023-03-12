@@ -25,6 +25,21 @@ To use this development container, you need to have Visual Studio Code and the [
 10. The container will be built and started. This may take a few minutes the first time, but subsequent starts will be much faster.
 11. Once the container is started, you can use Visual Studio Code's integrated terminal to execute Gradle commands, run tests, and interact with the Google Cloud SDK.
 
+### Using gcloud
+
+To use `gcloud` commands for managing Google Cloud resources, you first need to log in to Google Cloud Platform using the `gcloud auth` command-line tool. 
+
+1. In the terminal in Visual Studio Code, run the following command to log in to Google Cloud Platform with the `gcloud` command-line tool:
+```
+gcloud auth login
+```
+
+If you want to use the `gcloud` command-line tool with Application Default Credentials, you can run the following command instead:
+```
+gcloud auth application-default login
+```
+2. Use the terminal in Visual Studio Code to run `gcloud` commands for managing Google Cloud resources.
+
 ## Configuration
 
 This development container is preconfigured with Java 17, Gradle, and the Google Cloud SDK. If you need to make further configuration changes, you can modify the `devcontainer.json` file to suit your needs.
